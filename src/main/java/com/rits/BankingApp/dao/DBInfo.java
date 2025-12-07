@@ -1,10 +1,21 @@
 package com.rits.BankingApp.dao;
 
-public class DBInfo {
-    public static String url = "jdbc:mysql://localhost:3306/bankapp";
-    public static String user = "root";
-    public static String password = "RitSql@629";
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
+public class DBInfo {
+    static Properties properties = new Properties();
+    static{
+        try {
+        properties.load(new FileInputStream("credential.properties"));
+        } catch (IOException e) {
+        e.printStackTrace();
+        }
+    }
+    public static String url = properties.getProperty("DATABASE_URL");
+    public static String user = properties.getProperty("DATABASE_USERNAME");
+    public static String password = properties.getProperty("DATABASE_PASSWORD");
     private DBInfo() {
     }
 

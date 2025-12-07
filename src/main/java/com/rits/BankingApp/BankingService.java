@@ -48,7 +48,7 @@ public class BankingService {
             }
             else if (choice == 5) {
                 logout();
-                BankingAppApplication.takeInitialInput();
+                BankingApplication.takeInitialInput();
                 menu();
             } else {
                 System.out.println("Invalid Choice!");

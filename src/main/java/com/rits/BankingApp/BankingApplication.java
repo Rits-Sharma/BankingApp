@@ -2,7 +2,7 @@ package com.rits.BankingApp;
 
 import java.util.Scanner;
 
-public class BankingAppApplication {
+public class BankingApplication {
 
 	private static boolean isLoggedIn = false;
 	private static Scanner scan;
